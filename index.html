@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Pagi!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Gradient Pink */
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #882b54; /* Warna teks pink tua */
+            text-align: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.9); /* Putih transparan */
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(214, 51, 132, 0.2);
+            max-width: 400px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            border: 2px solid #ffcad4;
+        }
+        h1 { margin-bottom: 0.5rem; color: #d63384; } /* Pink cerah */
+        p { font-size: 1.2rem; margin-bottom: 1.5rem; color: #a1446e; }
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            background-color: #ff477e; /* Pink tombol */
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            font-weight: bold;
+        }
+        button:hover { 
+            transform: scale(1.05);
+            background-color: #d63384;
+        }
+        #message { 
+            margin-top: 1.5rem; 
+            font-style: italic; 
+            color: #d63384;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Selamat Pagii nanaa! 🌸</h1>
+        <p>Hai, semoga hari ini manis untukmu.</p>
+        <button onclick="showMessage()">Klik untuk Semangat</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                "Jadilah versi terbaik dari dirimu hari ini! ✨",
+                "Hal-hal hebat tidak pernah datang dari zona nyaman.",
+                "Senyummu adalah awal yang baik untuk hari yang indah.",
+                "Kamu mampu melakukan hal-hal luar biasa hari ini! 💖",
+                "Jangan lupa bersyukur dan tetap semangat ya!"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('message').innerText = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
